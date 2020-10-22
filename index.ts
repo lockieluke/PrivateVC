@@ -1,12 +1,8 @@
 import {Client, Message, VoiceChannel} from 'discord.js'
 import {Formatting} from './formatting'
-import * as fs from 'fs';
-import * as path from 'path'
+import {Config} from './config'
 
-const token: string = fs.readFileSync(path.join(__dirname, '../secret/token.txt'), {
-    encoding: 'utf8',
-});
-const inviteURL: string = 'https://discord.com/api/oauth2/authorize?client_id=768752855418798120&permissions=535899248&scope=bot';
+const token: string = Config.GetToken();
 
 const client: Client = new Client();
 
@@ -28,4 +24,6 @@ client.on('message', function (message: Message) {
     }
 })
 
-client.login(token);
+client.login(token).then(function (r) {
+    console.log("Logged In")
+});
