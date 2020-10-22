@@ -1,0 +1,17 @@
+{
+  "name": "privatevc",
+  "version": "1.0.0",
+  "description": "Private Voice Chat Assistant For Discord",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo Testing"
+  },
+  "author": "Lockie Luke",
+  "license": "ISC",
+  "typings": "node_modules/discord.js/typings/index.d.ts",
+  "dependencies": {
+    "@discordjs/opus": "^0.3.2",
+    "discord.js": "^12.4.0"
+  },
+  "repository": "https://github.com/lockieluke/PrivateVC.git"
+}
